@@ -6,14 +6,20 @@
  Since MediaTek has already closed Linkit7688(Duo) project, the Arduino packages found online are no longer valid. After searching for a while, I found that MediaTek had put the last package on GitHub. However, it used Python tool chain, so we needs to downgrade Python to 2.7 and then rebuild the project. Subsequently, one would need to rewrite the JSON file for Arduino IDE. So, I've upload zip and JSON file here for everyone to use. You can simply place it on your web server.
 
 
-## How to Use
-1.modify url in "package_mtk_linkit_smart_7688_index.json" file
+## How to install Arduino package
+
+### Method 1: link to your website
+1. Modify url in "package_mtk_linkit_smart_7688_index.json" file
 from http://localhost to Your Website URL 
 
 2. Open  Arduino Preferences--> Boards Manager URLs
    add your website url such as "http://localhost/package_mtk_linkit_smart_7688_index.json"
 
+### Method 2: local installation
+1. Find the sketchbook location. You can go to the preferences in Arduino IDE 2.0 to see it.
+2. Create a folder called ```hardware``` and create another folder called ```packages``` in ```hardware```.
+3. Copy the ```avr``` folder in ```mediatek_linkit_smart_7688_0.1.9.zip``` into ```hardware/packages```.
 
-##gauge.html
-1.modift FASTAPI_IP to your fastapi ip address
-2.change gauge.js url
+## gauge.html
+1. modift FASTAPI_IP to your fastapi ip address
+2. change gauge.js url
